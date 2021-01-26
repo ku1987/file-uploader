@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders buttons', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const uploadButton = screen.getByText(/Upload/i);
+  const saveButton = screen.getByText(/Save/i);
+  expect(uploadButton).toBeInTheDocument();
+  expect(saveButton).toBeInTheDocument();
 });
