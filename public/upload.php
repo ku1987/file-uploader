@@ -7,7 +7,7 @@
   $image = $_POST['image'];
   $name = $_POST['name'];
   $image = str_replace(' ' , '+' , $image);
-  $image = preg_replace('#^image:image/\w+;base64,#i' , '' , $image);
+  $image = preg_replace('#^data:image/\w+;base64,#i' , '' , $image);
   $decoded_image = base64_decode($image);
   file_put_contents('./uploads/'.$name, $decoded_image);
 ?>

@@ -39,7 +39,7 @@ function App() {
             },
           }
         );
-        console.log(res);
+        console.log(res.data);
       }
       alert(`Saved ${images.length} files.`)
       setImages([]);
@@ -60,7 +60,7 @@ function App() {
     if (!images || images.length === 0) {
       return null;
     }
-    return images && images.length > 0 && images.map((image, index) => (
+    return images.map((image, index) => (
       <div key={index}>
         <Button
           variant="outlined"
